@@ -65,7 +65,7 @@ Generate, normalize and validate permalinks
 
 
 <a name="generateFromFileName"></a>
-### generateFromFileName(fileName) ⇒ <code>String</code>
+#### generateFromFileName(fileName) ⇒ <code>String</code>
 Generates the permalink from the base name of a given
 file
 
@@ -77,7 +77,7 @@ file
 
 
 <a name="normalize"></a>
-### normalize(permalink) ⇒ <code>String</code>
+#### normalize(permalink) ⇒ <code>String</code>
 Normalize permalink by removing slashes around it. Must be
 used when matching two permalinks
 
@@ -89,7 +89,7 @@ used when matching two permalinks
 
 
 <a name="validate"></a>
-### validate(permalink) ⇒ <code>void</code>
+#### validate(permalink) ⇒ <code>void</code>
 Validate permalink to ensure the value is URL
 friendly
 
@@ -101,7 +101,7 @@ friendly
 
 
 <a name="isSame"></a>
-### isSame(lhs, rhs) ⇒ <code>Boolean</code>
+#### isSame(lhs, rhs) ⇒ <code>Boolean</code>
 Returns a boolean telling if 2 permalinks are same. They will
 be normalized before the check
 
@@ -118,7 +118,7 @@ be normalized before the check
 **Kind**: global class  
 <a name="new_Paths_new"></a>
 
-### new Paths(basePath, [distPath])
+#### new Paths(basePath, [distPath])
 Returns paths to certain directories, required by
 dimer
 
@@ -129,13 +129,13 @@ dimer
 | [distPath] | <code>String</code> | <code>&#x27;dist&#x27;</code> |
 
 <a name="configFile"></a>
-### configFile() ⇒ <code>String</code>
+#### configFile() ⇒ <code>String</code>
 Returns path to the config file
 
 **Kind**: global function  
 <a name="docsPath"></a>
 
-### docsPath(versionRelativePath) ⇒ <code>String</code>
+#### docsPath(versionRelativePath) ⇒ <code>String</code>
 Returns path for a given version inside the docs folder
 
 **Kind**: global function  
@@ -146,19 +146,19 @@ Returns path for a given version inside the docs folder
 
 <a name="distPath"></a>
 
-### distPath() ⇒ <code>String</code>
+#### distPath() ⇒ <code>String</code>
 Returns path to the dist folder
 
 **Kind**: global function  
 <a name="apiPath"></a>
 
-### apiPath() ⇒ <code>String</code>
+#### apiPath() ⇒ <code>String</code>
 Returns path to the API folder
 
 **Kind**: global function  
 <a name="versionPath"></a>
 
-### versionPath(versioNo) ⇒ <code>String</code>
+#### versionPath(versioNo) ⇒ <code>String</code>
 Returns path to a given version inside the api folder
 
 **Kind**: global function  
@@ -169,13 +169,13 @@ Returns path to a given version inside the api folder
 
 <a name="metaFile"></a>
 
-### metaFile() ⇒ <code>String</code>
+#### metaFile() ⇒ <code>String</code>
 Returns path to the meta file inside the api folder
 
 **Kind**: global function  
 <a name="searchIndexFile"></a>
 
-### searchIndexFile(versioNo) ⇒ <code>String</code>
+#### searchIndexFile(versioNo) ⇒ <code>String</code>
 Returns path to the search index file inside the api
 folder
 
