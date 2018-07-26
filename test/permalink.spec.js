@@ -8,6 +8,7 @@
 */
 
 const test = require('japa')
+const { sep } = require('path')
 const permalink = new (require('../src/Permalink'))()
 
 test.group('Permalink', () => {
@@ -64,7 +65,7 @@ test.group('Permalink', () => {
   })
 
   test('generate permalink from file name with slashes', (assert) => {
-    assert.equal(permalink.generateFromFileName('foo/bar.md'), 'foo-bar')
+    assert.equal(permalink.generateFromFileName(`foo${sep}bar.md`), 'foo-bar')
   })
 
   test('generate permalink from file name with numbers', (assert) => {
