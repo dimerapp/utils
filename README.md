@@ -46,6 +46,8 @@ const utils = require('@dimerapp/utils')
 utils.permalink
 ```
 
+## Classes
+
 <dl>
 <dt><a href="#Permalinks">Permalinks</a></dt>
 <dd></dd>
@@ -53,62 +55,67 @@ utils.permalink
 <dd></dd>
 </dl>
 
-## Functions
-
-<dl>
-<dt><a href="#generateFromFileName">generateFromFileName(fileName)</a> ⇒ <code>String</code></dt>
-<dd><p>Generates the permalink from the base name of a given
-file</p>
-</dd>
-<dt><a href="#normalize">normalize(permalink)</a> ⇒ <code>String</code></dt>
-<dd><p>Normalize permalink by removing slashes around it. Must be
-used when matching two permalinks</p>
-</dd>
-<dt><a href="#validate">validate(permalink)</a> ⇒ <code>void</code></dt>
-<dd><p>Validate permalink to ensure the value is URL
-friendly</p>
-</dd>
-<dt><a href="#isSame">isSame(lhs, rhs)</a> ⇒ <code>Boolean</code></dt>
-<dd><p>Returns a boolean telling if 2 permalinks are same. They will
-be normalized before the check</p>
-</dd>
-<dt><a href="#configFile">configFile()</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to the config file</p>
-</dd>
-<dt><a href="#docsPath">docsPath(versionRelativePath)</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path for a given version inside the docs folder</p>
-</dd>
-<dt><a href="#distPath">distPath()</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to the dist folder</p>
-</dd>
-<dt><a href="#apiPath">apiPath()</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to the API folder</p>
-</dd>
-<dt><a href="#versionPath">versionPath(versioNo)</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to a given version inside the api folder</p>
-</dd>
-<dt><a href="#metaFile">metaFile()</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to the meta file inside the api folder</p>
-</dd>
-<dt><a href="#searchIndexFile">searchIndexFile(versioNo)</a> ⇒ <code>String</code></dt>
-<dd><p>Returns path to the search index file inside the api
-folder</p>
-</dd>
-</dl>
-
 <a name="Permalinks"></a>
-
 ## Permalinks
-**Kind**: global class
+**Kind**: global class  
 <a name="new_Permalinks_new"></a>
 
 ### new Permalinks()
 Generate, normalize and validate permalinks
 
+
+<a name="generateFromFileName"></a>
+### generateFromFileName(fileName) ⇒ <code>String</code>
+Generates the permalink from the base name of a given
+file
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| fileName | <code>String</code> | 
+
+
+<a name="normalize"></a>
+### normalize(permalink) ⇒ <code>String</code>
+Normalize permalink by removing slashes around it. Must be
+used when matching two permalinks
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| permalink | <code>String</code> | 
+
+
+<a name="validate"></a>
+### validate(permalink) ⇒ <code>void</code>
+Validate permalink to ensure the value is URL
+friendly
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| permalink | <code>String</code> | 
+
+
+<a name="isSame"></a>
+### isSame(lhs, rhs) ⇒ <code>Boolean</code>
+Returns a boolean telling if 2 permalinks are same. They will
+be normalized before the check
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| lhs | <code>String</code> | 
+| rhs | <code>String</code> | 
+
 <a name="Paths"></a>
 
 ## Paths
-**Kind**: global class
+**Kind**: global class  
 <a name="new_Paths_new"></a>
 
 ### new Paths(basePath, [distPath])
@@ -118,119 +125,65 @@ dimer
 
 | Param | Type | Default |
 | --- | --- | --- |
-| basePath | <code>String</code> |  |
+| basePath | <code>String</code> |  | 
 | [distPath] | <code>String</code> | <code>&#x27;dist&#x27;</code> |
 
-<a name="generateFromFileName"></a>
-
-## generateFromFileName(fileName) ⇒ <code>String</code>
-Generates the permalink from the base name of a given
-file
-
-**Kind**: global function
-
-| Param | Type |
-| --- | --- |
-| fileName | <code>String</code> |
-
-<a name="normalize"></a>
-
-## normalize(permalink) ⇒ <code>String</code>
-Normalize permalink by removing slashes around it. Must be
-used when matching two permalinks
-
-**Kind**: global function
-
-| Param | Type |
-| --- | --- |
-| permalink | <code>String</code> |
-
-<a name="validate"></a>
-
-## validate(permalink) ⇒ <code>void</code>
-Validate permalink to ensure the value is URL
-friendly
-
-**Kind**: global function
-
-| Param | Type |
-| --- | --- |
-| permalink | <code>String</code> |
-
-<a name="isSame"></a>
-
-## isSame(lhs, rhs) ⇒ <code>Boolean</code>
-Returns a boolean telling if 2 permalinks are same. They will
-be normalized before the check
-
-**Kind**: global function
-
-| Param | Type |
-| --- | --- |
-| lhs | <code>String</code> |
-| rhs | <code>String</code> |
-
 <a name="configFile"></a>
-
-## configFile() ⇒ <code>String</code>
+### configFile() ⇒ <code>String</code>
 Returns path to the config file
 
-**Kind**: global function
+**Kind**: global function  
 <a name="docsPath"></a>
 
-## docsPath(versionRelativePath) ⇒ <code>String</code>
+### docsPath(versionRelativePath) ⇒ <code>String</code>
 Returns path for a given version inside the docs folder
 
-**Kind**: global function
+**Kind**: global function  
 
 | Param | Type |
 | --- | --- |
-| versionRelativePath | <code>String</code> |
+| versionRelativePath | <code>String</code> | 
 
 <a name="distPath"></a>
 
-## distPath() ⇒ <code>String</code>
+### distPath() ⇒ <code>String</code>
 Returns path to the dist folder
 
-**Kind**: global function
+**Kind**: global function  
 <a name="apiPath"></a>
 
-## apiPath() ⇒ <code>String</code>
+### apiPath() ⇒ <code>String</code>
 Returns path to the API folder
 
-**Kind**: global function
+**Kind**: global function  
 <a name="versionPath"></a>
 
-## versionPath(versioNo) ⇒ <code>String</code>
+### versionPath(versioNo) ⇒ <code>String</code>
 Returns path to a given version inside the api folder
 
-**Kind**: global function
+**Kind**: global function  
 
 | Param | Type |
 | --- | --- |
-| versioNo | <code>String</code> |
+| versioNo | <code>String</code> | 
 
 <a name="metaFile"></a>
 
-## metaFile() ⇒ <code>String</code>
+### metaFile() ⇒ <code>String</code>
 Returns path to the meta file inside the api folder
 
-**Kind**: global function
+**Kind**: global function  
 <a name="searchIndexFile"></a>
 
-## searchIndexFile(versioNo) ⇒ <code>String</code>
+### searchIndexFile(versioNo) ⇒ <code>String</code>
 Returns path to the search index file inside the api
 folder
 
-**Kind**: global function
+**Kind**: global function  
 
 | Param | Type |
 | --- | --- |
-| versioNo | <code>String</code> |
-
-[![travis-image]][travis-url]
-[![appveyor-image]][appveyor-url]
-[![npm-image]][npm-url]
+| versioNo | <code>String</code> | 
 
 ## Change log
 
