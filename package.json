@@ -1,6 +1,6 @@
 {
   "name": "@dimerapp/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handy utilities to keep all other repos DRY and consistent",
   "main": "index.js",
   "files": [
@@ -40,6 +40,7 @@
     ]
   },
   "dependencies": {
+    "mdast-util-to-string": "^1.0.4",
     "slugify": "^1.3.0"
   },
   "directories": {
