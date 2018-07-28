@@ -46,6 +46,14 @@ const utils = require('@dimerapp/utils')
 utils.permalink
 ```
 
+#### nodeToString(node)
+Convert Dimer content JSON node to a plain string
+
+```js
+const { nodeToString } = require('@dimerapp/utils')
+nodeToString(node)
+```
+
 ## Classes
 
 <dl>

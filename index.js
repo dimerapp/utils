@@ -14,3 +14,4 @@ const Permalink = require('./src/Permalink')
 
 utils.paths = (basePath, distPath) => new Paths(basePath, distPath)
 utils.permalink = new Permalink()
+utils.nodeToString = require('mdast-util-to-string')
