@@ -58,7 +58,10 @@ class Permalink {
    */
   validate (permalink) {
     if (!/^[A-Za-z0-9_./\-~]+$/.test(permalink)) {
-      throw new Error('Only words and numbers along with (_.-~) are allowed in permalink')
+      const error = new Error('Unallowed characters detected in permalink')
+      error.ruleId = 'bad-permalink'
+
+      throw error
     }
   }
 

@@ -14,12 +14,12 @@ const permalink = new (require('../src/Permalink'))()
 test.group('Permalink', () => {
   test('throw error if permalink has spaces', (assert) => {
     const fn = () => permalink.validate('hello world')
-    assert.throw(fn, 'Only words and numbers along with (_.-~) are allowed in permalink')
+    assert.throw(fn, 'Unallowed characters detected in permalink')
   })
 
   test('throw error if permalink has $', (assert) => {
     const fn = () => permalink.validate('hello$')
-    assert.throw(fn, 'Only words and numbers along with (_.-~) are allowed in permalink')
+    assert.throw(fn, 'Unallowed characters detected in permalink')
   })
 
   test('allow permalink with dashes', (assert) => {
