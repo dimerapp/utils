@@ -29,6 +29,7 @@ class Paths {
     this.basePath = basePath
     this.distPathRef = distPath || 'dist'
     this.apiPathRef = '__api'
+    this.assetsPathRef = '__assets'
   }
 
   /**
@@ -76,6 +77,17 @@ class Paths {
    */
   apiPath () {
     return join(this.distPath(), this.apiPathRef)
+  }
+
+  /**
+   * Returns path to the assets directory
+   *
+   * @method assetsPath
+   *
+   * @return {String}
+   */
+  assetsPath () {
+    return join(this.distPath(), this.assetsPathRef)
   }
 
   /**
