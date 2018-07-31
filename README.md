@@ -164,6 +164,12 @@ Returns path to the dist folder
 Returns path to the API folder
 
 **Kind**: global function  
+<a name="assetsPath"></a>
+
+#### assetsPath() ⇒ <code>String</code>
+Returns path to the assets folder
+
+**Kind**: global function  
 <a name="versionPath"></a>
 
 #### versionPath(versioNo) ⇒ <code>String</code>

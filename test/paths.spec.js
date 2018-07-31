@@ -39,4 +39,8 @@ test.group('Paths', () => {
   test('get path to search index file', (assert) => {
     assert.equal(paths.searchIndexFile('1.0.0'), join(__dirname, 'dist', '__api', '1.0.0', 'search.json'))
   })
+
+  test('get path to assets path', (assert) => {
+    assert.equal(paths.assetsPath(), join(__dirname, 'dist', '__assets'))
+  })
 })
