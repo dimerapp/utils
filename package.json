@@ -1,6 +1,6 @@
 {
   "name": "@dimerapp/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Handy utilities to keep all other repos DRY and consistent",
   "main": "index.js",
   "files": [
