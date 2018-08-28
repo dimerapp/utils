@@ -124,14 +124,33 @@ class Paths {
    * @method searchIndexFile
    *
    * @param  {String}        zoneSlug
-   * @param  {String}        versioNo
+   * @param  {String}        versionNo
    *
    * @return {String}
    */
-  searchIndexFile (zoneSlug, versioNo) {
+  searchIndexFile (zoneSlug, versionNo) {
     validateAsString(zoneSlug, 'zoneSlug', 'searchIndexFile')
-    validateAsString(versioNo, 'versioNo', 'searchIndexFile')
-    return join(this.versionPath(zoneSlug, versioNo), 'search.json')
+    validateAsString(versionNo, 'versionNo', 'searchIndexFile')
+    return join(this.versionPath(zoneSlug, versionNo), 'search.json')
+  }
+
+  /**
+   * Returns path to the doc json file
+   *
+   * @method docPath
+   *
+   * @param  {String} zoneSlug
+   * @param  {String} versionNo
+   * @param  {String} jsonPath
+   *
+   * @return {String}
+   */
+  docPath (zoneSlug, versionNo, jsonPath) {
+    validateAsString(zoneSlug, 'zoneSlug', 'docPath')
+    validateAsString(versionNo, 'versionNo', 'docPath')
+    validateAsString(jsonPath, 'jsonPath', 'docPath')
+
+    return join(this.versionPath(zoneSlug, versionNo), jsonPath)
   }
 }
 

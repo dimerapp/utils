@@ -43,4 +43,8 @@ test.group('Paths', () => {
   test('get path to assets path', (assert) => {
     assert.equal(paths.assetsPath(), join(__dirname, 'dist', '__assets'))
   })
+
+  test('get path to doc file', (assert) => {
+    assert.equal(paths.docPath('api', 'master', 'foo.json'), join(__dirname, 'dist', '__api', 'api', 'master', 'foo.json'))
+  })
 })
