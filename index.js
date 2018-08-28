@@ -11,7 +11,9 @@ const utils = exports = module.exports = {}
 
 const Paths = require('./src/Paths')
 const Permalink = require('./src/Permalink')
+const Validator = require('./src/Validator')
 
 utils.paths = (basePath, distPath) => new Paths(basePath, distPath)
 utils.permalink = new Permalink()
+utils.validator = new Validator()
 utils.nodeToString = require('mdast-util-to-string')
