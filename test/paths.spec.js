@@ -8,7 +8,7 @@
 */
 
 const test = require('japa')
-const { join } = require('path')
+const { join, win32 } = require('path')
 const paths = new (require('../src/Paths'))(__dirname)
 
 test.group('Paths', () => {
@@ -46,5 +46,17 @@ test.group('Paths', () => {
 
   test('get path to doc file', (assert) => {
     assert.equal(paths.docPath('api', 'master', 'foo.json'), join(__dirname, 'dist', '__api', 'api', 'master', 'foo.json'))
+  })
+
+  test('remove trailing slashes from file path', (assert) => {
+    assert.equal(paths.makeJsonPath('/foo.md/'), 'foo.json')
+  })
+
+  test('replace ext with json', (assert) => {
+    assert.equal(paths.makeJsonPath('foo.md'), 'foo.json')
+  })
+
+  test('replace windows slashes with unix', (assert) => {
+    assert.equal(paths.makeJsonPath(win32.join('foo', 'bar.md')), 'foo/bar.json')
   })
 })

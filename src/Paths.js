@@ -7,7 +7,8 @@
 * file that was distributed with this source code.
 */
 
-const { join } = require('path')
+const slash = require('slash')
+const { join, extname } = require('path')
 
 function validateAsString (value, label, parent) {
   if (typeof (value) !== 'string' || !value) {
@@ -151,6 +152,20 @@ class Paths {
     validateAsString(jsonPath, 'jsonPath', 'docPath')
 
     return join(this.versionPath(zoneSlug, versionNo), jsonPath)
+  }
+
+  /**
+   * Makes the json path from the doc file path. Also it makes sure to
+   * keep the slashes consistent for deployment on unix systems
+   *
+   * @method makeJsonPath
+   *
+   * @param  {String}     filePath
+   *
+   * @return {String}
+   */
+  makeJsonPath (filePath) {
+    return slash(filePath).replace(/^\/|\/$/g, '').replace(new RegExp(`${extname(filePath)}$`), '.json')
   }
 }
 
