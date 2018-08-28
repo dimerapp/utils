@@ -95,13 +95,15 @@ class Paths {
    *
    * @method versionPath
    *
+   * @param  {String}    zoneSlug
    * @param  {String}    versioNo
    *
    * @return {String}
    */
-  versionPath (versioNo) {
+  versionPath (zoneSlug, versioNo) {
+    validateAsString(zoneSlug, 'zoneSlug', 'versionPath')
     validateAsString(versioNo, 'versioNo', 'versionPath')
-    return join(this.apiPath(), versioNo)
+    return join(this.apiPath(), zoneSlug, versioNo)
   }
 
   /**
@@ -121,13 +123,15 @@ class Paths {
    *
    * @method searchIndexFile
    *
+   * @param  {String}        zoneSlug
    * @param  {String}        versioNo
    *
    * @return {String}
    */
-  searchIndexFile (versioNo) {
+  searchIndexFile (zoneSlug, versioNo) {
+    validateAsString(zoneSlug, 'zoneSlug', 'searchIndexFile')
     validateAsString(versioNo, 'versioNo', 'searchIndexFile')
-    return join(this.versionPath(versioNo), 'search.json')
+    return join(this.versionPath(zoneSlug, versioNo), 'search.json')
   }
 }
 

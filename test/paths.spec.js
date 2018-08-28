@@ -29,7 +29,7 @@ test.group('Paths', () => {
   })
 
   test('get version path to api folder', (assert) => {
-    assert.equal(paths.versionPath('1.0.0'), join(__dirname, 'dist', '__api', '1.0.0'))
+    assert.equal(paths.versionPath('guides', '1.0.0'), join(__dirname, 'dist', '__api', 'guides', '1.0.0'))
   })
 
   test('get path to meta file', (assert) => {
@@ -37,7 +37,7 @@ test.group('Paths', () => {
   })
 
   test('get path to search index file', (assert) => {
-    assert.equal(paths.searchIndexFile('1.0.0'), join(__dirname, 'dist', '__api', '1.0.0', 'search.json'))
+    assert.equal(paths.searchIndexFile('api', '1.0.0'), join(__dirname, 'dist', '__api', 'api', '1.0.0', 'search.json'))
   })
 
   test('get path to assets path', (assert) => {
