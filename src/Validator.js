@@ -7,6 +7,12 @@
  * file that was distributed with this source code.
 */
 
+/**
+ * Exposes validation methods to validate different parts of the
+ * user input.
+ *
+ * @class Validator
+ */
 class Validator {
   /**
    * Validates the zone slug to make sure it's URL and folder
