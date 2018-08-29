@@ -92,6 +92,19 @@ class Paths {
   }
 
   /**
+   * Returns path to a given zone directory inside the api folder
+   *
+   * @method zonePath
+   *
+   * @param  {String}    zoneSlug
+   *
+   * @return {String}
+   */
+  zonePath (zoneSlug) {
+    validateAsString(zoneSlug, 'zoneSlug', 'versionPath')
+    return join(this.apiPath(), zoneSlug)
+  }
+  /**
    * Returns path to a given version inside the api folder
    *
    * @method versionPath
@@ -104,7 +117,7 @@ class Paths {
   versionPath (zoneSlug, versioNo) {
     validateAsString(zoneSlug, 'zoneSlug', 'versionPath')
     validateAsString(versioNo, 'versioNo', 'versionPath')
-    return join(this.apiPath(), zoneSlug, versioNo)
+    return join(this.zonePath(zoneSlug), versioNo)
   }
 
   /**
