@@ -78,6 +78,9 @@ nodeToString(node)
 <dt><a href="#assetsPath">assetsPath()</a> ⇒ <code>String</code></dt>
 <dd><p>Returns path to the assets directory</p>
 </dd>
+<dt><a href="#zonePath">zonePath(zoneSlug)</a> ⇒ <code>String</code></dt>
+<dd><p>Returns path to a given zone directory inside the api folder</p>
+</dd>
 <dt><a href="#versionPath">versionPath(zoneSlug, versioNo)</a> ⇒ <code>String</code></dt>
 <dd><p>Returns path to a given version inside the api folder</p>
 </dd>
@@ -191,6 +194,17 @@ Returns path to the API folder
 Returns path to the assets directory
 
 **Kind**: global function  
+<a name="zonePath"></a>
+
+## zonePath(zoneSlug) ⇒ <code>String</code>
+Returns path to a given zone directory inside the api folder
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| zoneSlug | <code>String</code> | 
+
 <a name="versionPath"></a>
 
 ## versionPath(zoneSlug, versioNo) ⇒ <code>String</code>
